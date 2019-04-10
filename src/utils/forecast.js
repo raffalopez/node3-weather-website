@@ -12,7 +12,9 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find location', undefined);
         } else {
             const data = body.currently;
-            callback(undefined, body.daily.data[0].summary + ' Temperature: ' + data.temperature + '. Precipitation probability: ' + data.precipProbability);
+            const dailyData = body.daily.data[0];
+            callback(undefined, dailyData.summary + ' Temperature: ' + data.temperature + '. Precipitation probability: ' + data.precipProbability
+                + '. Max temperature for today: ' + dailyData.temperatureHigh + '. Humidity: ' + data.humidity);
         }
     });
 };
