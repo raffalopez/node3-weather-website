@@ -21,14 +21,14 @@ app.use(express.static(publicDP));
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        name: 'Test Name'
+        name: 'Rafa Lopez'
     });
 });
 
 app.get('/about', (req, res) => {
 res.render('about', {
     title: 'About',
-    name: 'test name'
+    name: 'Rafa Lopez'
 });
 });
 
@@ -36,7 +36,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title:'Help',
         message: 'This is a help message.',
-        name: 'test Name'
+        name: 'Rafa Lopez'
     });
 });
 
@@ -75,7 +75,7 @@ app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404',
         message: 'Help article not found.',
-        name: 'No name'
+        name: 'Rafa Lopez'
 
     })
 });
@@ -84,7 +84,7 @@ app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
         message: 'Page not found.',
-        name: 'No name'
+        name: 'Rafa Lopez'
 
     })
 });
